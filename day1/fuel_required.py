@@ -21,8 +21,15 @@ assert total_fuel(1969) == 966
 assert total_fuel(100756) == 50346
 
 inputs = open("input.txt", "r").readlines()
-total = 0
-for mass in inputs:
-    total += total_fuel(int(mass))
 
-print("total fuel",total)
+total1 = 0
+for mass in inputs:
+    total1 += fuel_required(int(mass))
+
+print("fuel required",total1)
+
+total2 = 0
+for mass in inputs:
+    total2 += total_fuel(int(mass))
+
+print("total fuel",total2)
